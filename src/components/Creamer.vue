@@ -19,6 +19,7 @@ const newColor = computed(() => currentCreamer.value.color)
   width: 100%;
   background-color: #c6c6c6;
   animation: pour-tea 2s 2s forwards;
+  
 }
 .foam {
   display: block;
