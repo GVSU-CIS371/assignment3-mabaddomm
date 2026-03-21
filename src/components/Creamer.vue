@@ -4,7 +4,12 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import {currentCreamer} from "../stores/beverage";
+import {computed} from "vue";
+const newColor = computed(() => currentCreamer.value.color)
+</script>
+
 <style lang="scss" scoped>
 .froth {
   overflow: visible;
@@ -17,7 +22,8 @@
 }
 .foam {
   display: block;
-  background: #e4e0d2;
+  background: v-bind(newColor);
+  //background: #e4e0d2;
   border-radius: 30px;
   height: 40px;
   width: 40px;
